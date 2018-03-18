@@ -12,12 +12,13 @@ var IntentMap = require('./Intents')
 var States = require('./states')
 var Errors = require('./Errors')
 var Ayva = require('ayva')
+var DefaultStateProvider = require('./DataStores/DefaultStateProvider')
 
 //Ayva Config
 Ayva.Config.RegisterIntents(IntentMap);
 Ayva.Config.RegisterStates(States);
 Ayva.Config.RegisterErrors(Errors)
-Ayva.Config.StateProvider(function(){return "default"}); //Change this for applications with non-trivial state
+Ayva.Config.StateProvider(DefaultStateProvider);
 
 app.post('/gAssistant', function(req, res) {
     Ayva.ExecuteRequest.FromGoogle(req.body, res);    

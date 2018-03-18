@@ -1,6 +1,6 @@
 var States = {
     'default': {
-        activeIntents: ['Welcome'],
+        activeIntents: ['Welcome', 'AddItem', 'RemoveItem', 'CheckItem'],
         middleware: ['logInput']
     }
 }

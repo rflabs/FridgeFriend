@@ -9,7 +9,7 @@ var InventoryDataStore = function(){
             delete Inventory[groceryItem];
         },
         containsItem: function(groceryItem) {
-            return Object.keys(Inventory).contains(groceryItem)
+            return Object.keys(Inventory).includes(groceryItem);
         }
     }
 }()

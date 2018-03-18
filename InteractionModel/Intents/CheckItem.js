@@ -4,16 +4,16 @@ var CheckItem = {
         "Check to see if I have any {'item':'pickles'}",
         "Do I have {'item':'lettuce'}",
         "Do I have any {'item':'onions'}",
-        "Check for {'item':'bread'}"
+        "Check for {'item':'bread'}",
+        "Check {'item':'bagels'}"
     ],
-    slots: [
-        {
-            name: "item",
-            dataType: "GroceryItem",
+    slots: {
+        "item": {
+            dataType: "@GroceryItem",
             required: true,
-            prompts: ["What should I look for?", "What can I find for you?"]
+            prompts: ["Please tell me the item you want to add to your refrigerator"]
         }
-    ]
+    }
 }
 
 module.exports = CheckItem

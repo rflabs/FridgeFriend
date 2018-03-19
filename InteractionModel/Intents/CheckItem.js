@@ -9,7 +9,7 @@ var CheckItem = {
     ],
     slots: {
         "item": {
-            dataType: "@GroceryItem",
+            dataType: "GroceryItem",
             required: true,
             prompts: ["Please tell me the item you want to add to your refrigerator"]
         }
